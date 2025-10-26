@@ -9,38 +9,40 @@
   <body>
     <header>
       <h1>Code Snippet Manager</h1>
-      <p>Your personal library of reusable code.</p>
+      <p class="subtitle">Your personal library of reusable code.</p>
     </header>
 
     <main>
-      <section>
-        <div>
-          <span id="snippets">24</span>
+      <section class="stats-section">
+        <div class="stats-card">
+          <span class="stats-number" id="snippets">24</span>
           <p>Total snippets</p>
         </div>
 
-        <div>
-          <span id="languages">5</span>
+        <div class="stats-card">
+          <span class="stats-number" id="languages">5</span>
           <p>Languages</p>
         </div>
 
-        <div>
-          <span id="tags">10</span>
+        <div class="stats-card">
+          <span class="stats-number" id="tags">10</span>
           <p>Unique Tags</p>
         </div>
       </section>
 
-      <section>
-        <aside>
+      <section >
+        <aside class="sidebar">
           <button id="addSnippet">Add new snippet</button>
-          <input type="text" id="searchSnippets" />
+          <input type="text" id="searchSnippets" class="search-box" placeholder="Search snippets..."/>
           <div>
             <h3>Popular Tags</h3>
             <span id="listTags"></span>
           </div>
         </aside>
-        <div>
-          <span id="listSnippets"></span>
+        <div class="snippets-container">
+          <div id="listSnippets" class="snippets-grid">
+
+          </div>
         </div>
       </section>
     </main>
