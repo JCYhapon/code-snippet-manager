@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Snipper Manager</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Code Snippet Manager</h1>
+      <p>Your personal library of reusable code.</p>
+    </header>
+
+    <main>
+      <section>
+        <div>
+          <span id="snippets">24</span>
+          <p>Total snippets</p>
+        </div>
+
+        <div>
+          <span id="languages">5</span>
+          <p>Languages</p>
+        </div>
+
+        <div>
+          <span id="tags">10</span>
+          <p>Unique Tags</p>
+        </div>
+      </section>
+
+      <section>
+        <aside>
+          <button id="addSnippet">Add new snippet</button>
+          <input type="text" id="searchSnippets" />
+          <div>
+            <h3>Popular Tags</h3>
+            <span id="listTags"></span>
+          </div>
+        </aside>
+        <div>
+          <span id="listSnippets"></span>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
