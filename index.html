@@ -30,10 +30,15 @@
         </div>
       </section>
 
-      <section >
+      <section>
         <aside class="sidebar">
           <button id="addSnippet">Add new snippet</button>
-          <input type="text" id="searchSnippets" class="search-box" placeholder="Search snippets..."/>
+          <input
+            type="text"
+            id="searchSnippets"
+            class="search-box"
+            placeholder="Search snippets..."
+          />
           <div>
             <h3>Popular Tags</h3>
             <!-- All tags will be displayed here -->
@@ -41,15 +46,39 @@
           </div>
         </aside>
         <div class="snippets-container">
-            <!-- This is where all the snippets will be displayed -->
-          <div id="listSnippets" class="snippets-grid">
-
-          </div>
+          <!-- This is where all the snippets will be displayed -->
+          <div id="listSnippets" class="snippets-grid"></div>
         </div>
       </section>
     </main>
 
     <footer></footer>
+
+    <div id="addSnippetModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Snippet</h2>
+        <form id="snippetForm">
+          <input type="text" id="snippetTitle" placeholder="Title" required />
+          <textarea id="snippetCode" placeholder="Code" required></textarea>
+          <input
+            type="text"
+            id="snippetLanguage"
+            placeholder="Language (e.g., JavaScript)"
+          />
+          <input
+            type="text"
+            id="snippetTags"
+            placeholder="Tags (comma-separated)"
+          />
+          <textarea
+            id="snippetDescription"
+            placeholder="Description"
+          ></textarea>
+          <button type="submit">Add Snippet</button>
+        </form>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
