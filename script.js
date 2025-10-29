@@ -1,10 +1,9 @@
-const numberOfSnippets = document.querySelector("#snippets");
-const numberOfLanguages = document.querySelector("#languages");
-const numberOfTags = document.querySelector("#tags");
+const snippetsEl = document.querySelector("#snippets");
+const languagesEl = document.querySelector("#languages");
+const tagsEl = document.querySelector("#tags");
 const addSnippetsEl = document.querySelector("#addSnippet");
 const searchSnippetsEl = document.querySelector("#searchSnippets");
 const listTagsEl = document.querySelector("#listTags");
-const listSnippetsEl = document.querySelector("#listSnippets");
 const addSnippetModalEl = document.querySelector("#addSnippetModal");
 const snippetFormEl = document.querySelector("#snippetForm");
 const closeModalEl = document.querySelector(".close");
@@ -20,22 +19,35 @@ closeModalEl.addEventListener("click", () => {
 
 snippetFormEl.addEventListener("submit", addSnippet);
 
+let
+
 function addSnippet(e) {
   //Prevent the page to reload once the submit button was clicked
   e.preventDefault();
+
   const title = document.querySelector("#snippetTitle").value;
   const code = document.querySelector("#snippetCode").value;
   const language = document.querySelector("#snippetLanguage").value;
   const tag = document.querySelector("#snippetTags").value;
   const description = document.querySelector("#snippetDescription").value;
+  const listSnippetsEl = document.querySelector("#listSnippets");
 
   const snippet = {
     title,
     code,
     language,
     tag,
-    description
-  }
+    description,
+  };
 
-  console.log(snippet);
+  const div = document.createElement("div");
+  div.classList.add("snippets-card");
+  div.innerHTML = `
+    <h3>${snippet.title}</h3>
+    <span>${snippet.code}</span>
+    <p>${snippet.language}</p>
+    <p>${snippet.tag}</p>
+    <p>${snippet.description}</p>
+    `;
+  listSnippetsEl.appendChild(div);
 }
