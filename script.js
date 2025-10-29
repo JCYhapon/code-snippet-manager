@@ -20,6 +20,8 @@ closeModalEl.addEventListener("click", () => {
 
 snippetFormEl.addEventListener("submit", addSnippet);
 
+let snippetCounts = 0;
+
 function addSnippet(e) {
   //Prevent the page to reload once the submit button was clicked
   e.preventDefault();
@@ -29,6 +31,18 @@ function addSnippet(e) {
   const language = document.querySelector("#snippetLanguage").value;
   const tag = document.querySelector("#snippetTags").value;
   const description = document.querySelector("#snippetDescription").value;
+
+  if(!title) {
+    const titleWarningEl = document.querySelector("#titleWarning");
+    titleWarningEl.classList.remove("hidden");
+    return;
+  };
+
+  if(!code) {
+    const codeWarningEl = document.querySelector("#codeWarning");
+    codeWarningEl.classList.remove("hidden");
+    return;
+  };
 
   const snippet = {
     title,
@@ -48,4 +62,7 @@ function addSnippet(e) {
     <p>${snippet.description}</p>
     `;
   listSnippetsEl.appendChild(div);
+
+  snippetCounts++;
+  snippetsEl.textContent =  snippetCounts;
 }
