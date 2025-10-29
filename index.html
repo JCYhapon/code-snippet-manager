@@ -15,17 +15,17 @@
     <main>
       <section class="stats-section">
         <div class="stats-card">
-          <span class="stats-number" id="snippets">24</span>
+          <span class="stats-number" id="snippets">0</span>
           <p>Total snippets</p>
         </div>
 
         <div class="stats-card">
-          <span class="stats-number" id="languages">5</span>
+          <span class="stats-number" id="languages">0</span>
           <p>Languages</p>
         </div>
 
         <div class="stats-card">
-          <span class="stats-number" id="tags">10</span>
+          <span class="stats-number" id="tags">0</span>
           <p>Unique Tags</p>
         </div>
       </section>
@@ -52,8 +52,6 @@
       </section>
     </main>
 
-
-
     <footer></footer>
 
     <div id="addSnippetModal" class="modal hidden">
@@ -61,7 +59,9 @@
         <span class="close">&times;</span>
         <h2>Add New Snippet</h2>
         <form id="snippetForm">
+          <span id="titleWarning" class="hidden">Enter a title</span>
           <input type="text" id="snippetTitle" placeholder="Title"  />
+          <span id="codeWarning" class="hidden">Provide a code</span>
           <textarea id="snippetCode" placeholder="Code" ></textarea>
           <input
             type="text"
