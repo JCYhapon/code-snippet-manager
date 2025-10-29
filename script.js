@@ -7,11 +7,6 @@ const listTagsEl = document.querySelector("#listTags");
 const addSnippetModalEl = document.querySelector("#addSnippetModal");
 const snippetFormEl = document.querySelector("#snippetForm");
 const closeModalEl = document.querySelector(".close");
-const title = document.querySelector("#snippetTitle").value;
-const code = document.querySelector("#snippetCode").value;
-const language = document.querySelector("#snippetLanguage").value;
-const tag = document.querySelector("#snippetTags").value;
-const description = document.querySelector("#snippetDescription").value;
 const listSnippetsEl = document.querySelector("#listSnippets");
 
 addSnippetsEl.addEventListener("click", () => {
@@ -25,11 +20,15 @@ closeModalEl.addEventListener("click", () => {
 
 snippetFormEl.addEventListener("submit", addSnippet);
 
-let snippetsCount = 0;
-
 function addSnippet(e) {
   //Prevent the page to reload once the submit button was clicked
   e.preventDefault();
+
+  const title = document.querySelector("#snippetTitle").value;
+  const code = document.querySelector("#snippetCode").value;
+  const language = document.querySelector("#snippetLanguage").value;
+  const tag = document.querySelector("#snippetTags").value;
+  const description = document.querySelector("#snippetDescription").value;
 
   const snippet = {
     title,
