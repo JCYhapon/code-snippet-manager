@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Snipper Manager</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -16,7 +16,7 @@
       <p class="subtitle">Your personal library of reusable code.</p>
     </header>
 
-    <main>
+    <main class="main-section">
       <section class="stats-section">
         <div class="stats-card">
           <span class="stats-number" id="snippets">0</span>
@@ -34,7 +34,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="content-section">
         <aside class="sidebar">
           <button id="addSnippet">Add new snippet</button>
           <input
@@ -60,8 +60,10 @@
 
     <div id="addSnippetModal" class="modal hidden">
       <div class="modal-content">
+        <header class="modal-header">
+        <h2>New Snippet</h2>
         <span class="close">&times;</span>
-        <h2>Add New Snippet</h2>
+        </header>
         <form id="snippetForm">
           <span id="titleWarning" class="hidden">Enter a title</span>
           <input type="text" id="snippetTitle" placeholder="Title"  />
