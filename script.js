@@ -59,11 +59,11 @@ function addSnippet(e) {
   const div = document.createElement("div");
   div.classList.add("snippets-card");
   div.innerHTML = `
-    <h3>${snippet.title}</h3>
-    <span>${snippet.code}</span>
-    <p>${snippet.language}</p>
-    <p>${snippet.tag}</p>
-    <p>${snippet.description}</p>
+    <h3 class="snippet-title">${snippet.title}</h3>
+    <p class="snippet-language">${snippet.language}</p>
+    <pre><code class="snippet-code">${snippet.code}</pre></code>
+    <p class="snippet-tag">${snippet.tag}</p>
+    <p class="snippet-description">${snippet.description}</p>
     `;
   listSnippetsEl.appendChild(div);
 
