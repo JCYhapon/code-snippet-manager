@@ -1,7 +1,55 @@
-.hidden {
+:root {
+  font-family: "Montserrat", sans-serif;
+  --primary-color: #282828;
+  --primary-bg: #f8f8f8;
+  --primary-border: rgb(180, 180, 180);
+}
+
+.hidden,
+.overlay {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 .close {
   cursor: pointer;
+}
+
+.body-bg {
+  background-color: #05050546;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.329);
+  z-index: 10;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-border);
+  z-index: 20;
 }
