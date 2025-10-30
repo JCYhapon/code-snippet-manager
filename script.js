@@ -8,14 +8,18 @@ const addSnippetModalEl = document.querySelector("#addSnippetModal");
 const snippetFormEl = document.querySelector("#snippetForm");
 const closeModalEl = document.querySelector(".close");
 const listSnippetsEl = document.querySelector("#listSnippets");
+const overlayEl = document.querySelector("#overlay");
 
 addSnippetsEl.addEventListener("click", () => {
   addSnippetModalEl.classList.remove("hidden");
+    overlayEl.classList.add("overlay");
+    overlayEl.classList.add("show");
 });
 
 closeModalEl.addEventListener("click", () => {
   addSnippetModalEl.classList.add("hidden"); // hide the modal again
   document.body.style.overflow = ""; // restore scrolling
+  overlayEl.classList.remove("overlay");
 });
 
 snippetFormEl.addEventListener("submit", addSnippet);
