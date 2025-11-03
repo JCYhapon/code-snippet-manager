@@ -17,7 +17,7 @@ addSnippetsEl.addEventListener("click", () => {
 });
 
 closeModalEl.addEventListener("click", () => {
-  addSnippetModalEl.classList.add("hidden"); // hide the modal again
+  addSnippetModalEl.classList.add("hidden"); 
   document.body.style.overflow = ""; // restore scrolling
   overlayEl.classList.remove("overlay");
 });
