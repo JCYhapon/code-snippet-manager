@@ -34,4 +34,26 @@ Built using **HTML**, **CSS**, and **JavaScript**, this app lets you easily add,
 
 ---
 
+## ⚙️ How It Works
 
+1. Open `index.html` in your browser.
+2. Click **“Add New Snippet”**.
+3. Fill in the snippet details and click **Save**.
+4. View, search, or delete snippets directly on the page.
+
+## 🧱 Future Improvements
+
+- ✨ Syntax highlighting for code blocks  
+- 🏷️ Editable tags and categories  
+- 📁 Import/export snippets as JSON files  
+- 🔐 User authentication (once backend is added)  
+- 🌙 Dark mode toggle  
+- 💾 Work in LocalSotrage or Backend
+
+## 🪪 License
+Licensed under the [MIT License](./LICENSE) © 2025 John
+
+## 👨‍💻 Author
+
+**John**  
+Simple front-end developer practicing real-world projects.
