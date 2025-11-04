@@ -22,9 +22,6 @@ Built using **HTML**, **CSS**, and **JavaScript**, this app lets you easily add,
 - 🗑️ **Delete Snippet**
   - Remove snippets you no longer need with a single click.
 
-- 💾 **Local Storage**
-  - Snippets are stored in your browser’s `localStorage`, so your data stays even after refreshing the page.
-
 ---
 
 ## 🧩 Tech Stack
