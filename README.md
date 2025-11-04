@@ -37,5 +37,4 @@ Built using **HTML**, **CSS**, and **JavaScript**, this app lets you easily add,
 
 ---
 
-## 📂 Project Structure
 
