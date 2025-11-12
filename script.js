@@ -21,12 +21,10 @@ let uniqueTags = new Set();
 addSnippetsEl.addEventListener("click", () => {
   addSnippetModalEl.classList.remove("hidden");
   overlayEl.classList.add("show");
-  document.body.style.overflow = "hidden"; // prevent background scroll
 });
 
 // Close Modal
 closeModalEl.addEventListener("click", closeModal);
-overlayEl.addEventListener("click", closeModal);
 
 function closeModal() {
   addSnippetModalEl.classList.add("hidden");
